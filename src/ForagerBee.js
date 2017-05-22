@@ -3,7 +3,7 @@ var ForagerBee = function() {
   this.job = this.job('find pollen');
   this.color  = this.color('yellow');
   this.food = this.food('jelly');
-  this.canFly = this.canFly();
+  this.canFly = this.canFly(true);
   this.treasureChest = this.treasureChest();
 };
 
@@ -11,8 +11,8 @@ ForagerBee.prototype = Object.create(HoneyMakerBee.prototype);
 
 ForagerBee.prototype.constructor = ForagerBee;
 
-ForagerBee.prototype.canFly = function (){
-  return true;
+ForagerBee.prototype.canFly = function (boolean){
+  return boolean;
 };
 
 ForagerBee.prototype.treasureChest = function (){
